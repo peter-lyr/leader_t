@@ -1,5 +1,9 @@
 local F = require 'f'
 
+local function test()
+  F.get_cur_proj_dirs()
+end
+
 require 'which-key'.register {
   ['<leader>t'] = { name = 'test', },
   ['<leader>ts'] = { function() vim.cmd 'StartupTime' end, 'StartupTime', mode = { 'n', 'v', }, },
@@ -7,4 +11,5 @@ require 'which-key'.register {
   ['<leader>tw'] = { function() F.nvimtree_cd(F.get_cwd()) end, 'nvimtree_cd cwd', mode = { 'n', 'v', }, },
   ['<leader>to'] = { function() vim.cmd 'NvimTreeOpen' end, 'NvimTreeOpen', mode = { 'n', 'v', }, },
   ['<leader>tq'] = { function() vim.cmd 'NvimTreeClose' end, 'NvimTreeClose', mode = { 'n', 'v', }, },
+  ['<leader>tt'] = { function() test() end, 'test', mode = { 'n', 'v', }, },
 }
