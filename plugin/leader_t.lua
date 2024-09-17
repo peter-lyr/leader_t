@@ -1,7 +1,7 @@
 local F = require 'f'
 
 local function test()
-  F.get_cur_proj_dirs()
+  F.git_add_commit_push()
 end
 
 require 'which-key'.register {
