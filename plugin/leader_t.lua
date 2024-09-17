@@ -1,7 +1,12 @@
 local F = require 'f'
 
 local function test()
-  F.git_add_commit_push()
+  F.set_timeout(1000, function()
+    vim.notify('--------------')
+  end)
+  vim.ui.input({ prompt = '>' }, function(input)
+    print(input)
+  end)
 end
 
 require 'which-key'.register {
