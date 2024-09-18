@@ -1,12 +1,17 @@
 local F = require 'f'
 
 local function test()
-  F.set_timeout(1000, function()
-    vim.notify('--------------')
-  end)
-  vim.ui.input({ prompt = '>' }, function(input)
-    print(input)
-  end)
+
+  F.delete_folder(Home .. '\\org-test')
+  F.clone_if_not_exist('org-test', 'org')
+
+  -- F.set_timeout(1000, function()
+  --   vim.notify('--------------')
+  -- end)
+  -- vim.ui.input({ prompt = '>' }, function(input)
+  --   print(input)
+  -- end)
+
 end
 
 require 'which-key'.register {
@@ -21,4 +26,5 @@ require 'which-key'.register {
   ['<leader>td'] = { function() F.nvimtree_findfile() end, 'nvimtree_findfile', mode = { 'n', 'v', }, },
   ['<leader>tf'] = { function() vim.cmd 'NvimTreeFindFile' end, 'nvimtree_findfile_just_update', mode = { 'n', 'v', }, },
   ['<leader>tt'] = { function() test() end, 'test', mode = { 'n', 'v', }, },
+  ['<leader>tT'] = { function() F.source_cur() end, 'source_cur', mode = { 'n', 'v', }, },
 }
