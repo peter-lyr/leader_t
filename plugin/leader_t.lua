@@ -2,8 +2,8 @@ local F = require 'f'
 
 local function test()
 
-  F.delete_folder(Home .. '\\org-test')
-  F.clone_if_not_exist('org-test', 'org')
+  -- F.delete_folder(Home .. '\\org-test')
+  -- F.clone_if_not_exist('org-test', 'org')
 
   -- F.set_timeout(1000, function()
   --   vim.notify('--------------')
