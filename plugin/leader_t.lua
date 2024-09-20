@@ -1,6 +1,7 @@
 local F = require 'f'
 
 local function test()
+  F.run_outside { 'pip', 'install', 'pydub', '-i', 'https://pypi.tuna.tsinghua.edu.cn/simple', '--trusted-host', 'mirrors.aliyun.com', }
 
   -- F.delete_folder(Home .. '\\org-test')
   -- F.clone_if_not_exist('org-test', 'org')
