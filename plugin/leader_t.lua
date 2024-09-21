@@ -2,7 +2,13 @@ local F = require 'f'
 
 local function test()
 
-  F.source_cur()
+  F.just_run_in_term({
+    'cd', '/d', Home, '&&',
+    'cd', '/d', 'org-test-3', '&&',
+    'python', F.join_path(Org, 'data', 'p', '002-python', '017-在一个仓库内从叶子模块到根部依次更新.py')
+  })
+
+  -- F.source_cur()
 
   -- F.run_outside { 'pip', 'install', 'bitstring', '-i', 'https://pypi.tuna.tsinghua.edu.cn/simple', '--trusted-host', 'mirrors.aliyun.com', }
 
