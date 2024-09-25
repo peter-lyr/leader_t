@@ -30,6 +30,7 @@ end
 
 require 'which-key'.register {
   ['<leader>t'] = { name = 'test', },
+  ['<leader>tQ'] = { function() vim.cmd 'qa!' end, 'qa!', mode = { 'n', 'v', }, },
   ['<leader>tS'] = { function() vim.cmd 'StartupTime' end, 'StartupTime', mode = { 'n', 'v', }, },
   ['<leader>tc'] = { function() F.nvimtree_cd(F.get_cur_file()) end, 'nvimtree_cd %:h', mode = { 'n', 'v', }, },
   ['<leader>tw'] = { function() F.nvimtree_cd(F.get_cwd()) end, 'nvimtree_cd cwd', mode = { 'n', 'v', }, },
