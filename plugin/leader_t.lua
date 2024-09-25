@@ -2,7 +2,9 @@ local F = require 'f'
 
 local function test()
 
-  F.notifications_buffer()
+  -- F.git_pull_recursive_do([[C:\Users\llydr\org-test-1]])
+
+  -- F.notifications_buffer()
 
   -- F.just_run_in_term({
   --   'cd', '/d', Home, '&&',
