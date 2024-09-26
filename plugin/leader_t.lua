@@ -40,6 +40,7 @@ require 'which-key'.register {
   ['<leader>tp'] = { function() vim.cmd 'NvimTreeFocus' end, 'NvimTreeFocus', mode = { 'n', 'v', }, },
   ['<leader>td'] = { function() F.nvimtree_findfile() end, 'nvimtree_findfile', mode = { 'n', 'v', }, },
   ['<leader>tf'] = { function() vim.cmd 'NvimTreeFindFile' end, 'nvimtree_findfile_just_update', mode = { 'n', 'v', }, },
+  ['<leader>tn'] = { function() F.cmd('silent !start nvim-qt.exe %s', F.get_cur_file()) end, 'silent! nvim-qt.exe cur', mode = { 'n', 'v', }, },
   ['<leader>tt'] = { function() test() end, 'test', mode = { 'n', 'v', }, },
   ['<leader>tb'] = { name = 'output buffer', },
   ['<leader>tbn'] = { function() F.notifications_buffer() end, 'notifications_buffer', mode = { 'n', 'v', }, },
