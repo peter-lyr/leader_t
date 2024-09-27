@@ -1,7 +1,5 @@
 local F = require 'f'
 
--- commit space replace with -, " replace with “
-
 local function test()
   -- F.git_pull_recursive_do([[C:\Users\llydr\org-test-1]])
 
