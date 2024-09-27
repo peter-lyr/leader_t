@@ -1,6 +1,6 @@
 local F = require 'f'
 
--- test commit "&|%'(;!)we
+-- test commit "&|%'(;!) testing
 
 local function test()
   -- F.git_pull_recursive_do([[C:\Users\llydr\org-test-1]])
