@@ -1,6 +1,5 @@
 local F = require 'f'
 
--- test commit <leader>tt
 -- test commit "&|%'(;!)
 
 local function test()
