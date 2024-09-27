@@ -49,10 +49,9 @@ require 'which-key'.register {
   ['<leader>trc'] = { function() F.restart_nvim_qt(F.get_cur_file()) end, 'restart_nvim_qt cur', mode = { 'n', 'v', }, },
   ['<leader>trn'] = { function() F.restart_nvim_qt() end, 'restart_nvim_qt', mode = { 'n', 'v', }, },
 
-  ['<leader>tt'] = { function() test() end, 'test', mode = { 'n', 'v', }, },
-
   ['<leader>tb'] = { name = 'output buffer', },
   ['<leader>tbn'] = { function() F.notifications_buffer() end, 'notifications_buffer', mode = { 'n', 'v', }, },
 
+  ['<leader>tt'] = { function() test() end, 'test', mode = { 'n', 'v', }, },
   ['<leader>ts'] = { function() F.source_cur() end, 'source_cur', mode = { 'n', 'v', }, },
 }
