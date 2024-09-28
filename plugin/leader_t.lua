@@ -51,6 +51,7 @@ require 'which-key'.register {
 
   ['<leader>tb'] = { name = 'output buffer', },
   ['<leader>tbn'] = { function() F.notifications_buffer() end, 'notifications_buffer', mode = { 'n', 'v', }, },
+  ['<leader>tbm'] = { function() F.message_buffer() end, 'message_buffer', mode = { 'n', 'v', }, },
 
   ['<leader>tt'] = { function() test() end, 'test', mode = { 'n', 'v', }, },
   ['<leader>ts'] = { function() F.source_cur() end, 'source_cur', mode = { 'n', 'v', }, },
