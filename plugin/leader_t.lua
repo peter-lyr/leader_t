@@ -2,8 +2,10 @@ local F = require 'f'
 
 local function test()
 
+  -- F.list_buf_info()
+
   -- F.print(F.get_term_bufs())
-  F.jump_or_split_term()
+  -- F.jump_or_split_term()
 
   -- F.git_pull_recursive_do([[C:\Users\llydr\org-test-1]])
 
@@ -61,4 +63,5 @@ require 'which-key'.register {
   ['<leader>tt'] = { function() test() end, 'test', mode = { 'n', 'v', }, },
   ['<leader>ts'] = { function() F.source_cur() end, 'source_cur', mode = { 'n', 'v', }, },
   ['<leader>t<c-l>'] = { function() vim.cmd 'mes clear' end, 'mes clear', mode = { 'n', 'v', }, },
+  ['<leader>t<c-i>'] = { function() F.list_buf_info() end, 'list_buf_info', mode = { 'n', 'v', }, },
 }
