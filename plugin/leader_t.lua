@@ -64,4 +64,8 @@ require 'which-key'.register {
   ['<leader>ts'] = { function() F.source_cur() end, 'source_cur', mode = { 'n', 'v', }, },
   ['<leader>t<c-l>'] = { function() vim.cmd 'mes clear' end, 'mes clear', mode = { 'n', 'v', }, },
   ['<leader>t<c-i>'] = { function() F.list_buf_info() end, 'list_buf_info', mode = { 'n', 'v', }, },
+
+  ['<leader>tg'] = { name = 'toggle', },
+  ['<leader>tgw'] = { function() F.toggle_winbar() end, 'toggle_winbar', mode = { 'n', 'v', }, },
+  ['<leader>tgs'] = { function() F.toggle_statusline() end, 'toggle_statusline', mode = { 'n', 'v', }, },
 }
