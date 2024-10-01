@@ -1,7 +1,6 @@
 local F = require 'f'
 
 local function test()
-
   -- F.list_buf_info()
 
   -- F.print(F.get_term_bufs())
@@ -49,11 +48,15 @@ require 'which-key'.register {
   ['<leader>tn'] = { name = 'nvim-qt start', },
   ['<leader>tnc'] = { function() F.start_nvim_qt(F.get_cur_file()) end, 'start_nvim_qt cur', mode = { 'n', 'v', }, },
   ['<leader>tnn'] = { function() F.start_nvim_qt() end, 'start_nvim_qt', mode = { 'n', 'v', }, },
+  ['<leader>tns'] = { function() F.start_nvim_qt 'session' end, 'start_nvim_qt session', mode = { 'n', 'v', }, },
+  ['<leader>tn<leader>s'] = { function() F.start_nvim_qt 'session!' end, 'start_nvim_qt session!', mode = { 'n', 'v', }, },
   ['<leader>tnq'] = { function() vim.cmd 'qa!' end, 'qa!', mode = { 'n', 'v', }, },
 
   ['<leader>tr'] = { name = 'nvim-qt restart', },
   ['<leader>trc'] = { function() F.restart_nvim_qt(F.get_cur_file()) end, 'restart_nvim_qt cur', mode = { 'n', 'v', }, },
   ['<leader>trn'] = { function() F.restart_nvim_qt() end, 'restart_nvim_qt', mode = { 'n', 'v', }, },
+  ['<leader>trs'] = { function() F.restart_nvim_qt 'session' end, 'restart_nvim_qt session', mode = { 'n', 'v', }, },
+  ['<leader>tr<leader>s'] = { function() F.restart_nvim_qt 'session!' end, 'restart_nvim_qt session!', mode = { 'n', 'v', }, },
   ['<leader>trq'] = { function() vim.cmd 'qa!' end, 'qa!', mode = { 'n', 'v', }, },
 
   ['<leader>tb'] = { name = 'output buffer', },
