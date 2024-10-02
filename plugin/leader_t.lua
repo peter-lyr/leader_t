@@ -1,5 +1,13 @@
 local F = require 'f'
 
+F.aucmd('BufEnter', 'enter term', {
+  callback = function(ev)
+    if not vim.g.term_total or vim.g.term_total > 0 then
+      F.cd_term_cwd(ev.file)
+    end
+  end,
+})
+
 local function test()
   F.open_term_sel()
   -- F.notify(vim.inspect(vim.bo[vim.fn.bufnr()].expandtab))
