@@ -1,6 +1,7 @@
 local F = require 'f'
 
 local function test()
+  -- F.notify(F.get_opened_projs_files())
   -- F.opened_proj_sel()
 
   -- F.list_buf_info()
