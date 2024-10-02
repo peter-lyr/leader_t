@@ -86,7 +86,7 @@ require 'which-key'.register {
 
   ['<localleader>t'] = { name = 'toggle', },
   ['<localleader>td'] = { function() F.toggle_local 'diff' end, 'toggle_diff', mode = { 'n', 'v', }, },
-  ['<localleader>tw'] = { function() F.toggle_global 'wrap' end, 'toggle_wrap', mode = { 'n', 'v', }, },
+  ['<localleader>tw'] = { function() F.toggle_local 'wrap' end, 'toggle_wrap', mode = { 'n', 'v', }, },
   ['<localleader>tb'] = { function() F.toggle_winbar() end, 'toggle_winbar', mode = { 'n', 'v', }, },
   ['<localleader>ts'] = { function() F.toggle_statusline() end, 'toggle_statusline', mode = { 'n', 'v', }, },
 }
