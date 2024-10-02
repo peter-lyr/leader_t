@@ -1,6 +1,7 @@
 local F = require 'f'
 
 local function test()
+  F.get_opened_projs_bnames()
   -- F.list_buf_info()
 
   -- F.print(F.get_term_bufs())
