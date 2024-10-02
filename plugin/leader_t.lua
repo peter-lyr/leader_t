@@ -1,6 +1,7 @@
 local F = require 'f'
 
 local function test()
+  F.notify(vim.inspect(vim.bo[vim.fn.bufnr()].expandtab))
   -- F.notify(F.get_opened_projs_files())
   -- F.opened_proj_sel()
 
@@ -71,7 +72,9 @@ require 'which-key'.register {
   ['<leader>t<c-l>'] = { function() vim.cmd 'mes clear' end, 'mes clear', mode = { 'n', 'v', }, },
   ['<leader>t<c-i>'] = { function() F.list_buf_info() end, 'list_buf_info', mode = { 'n', 'v', }, },
 
-  ['<leader>tg'] = { name = 'toggle', },
-  ['<leader>tgw'] = { function() F.toggle_winbar() end, 'toggle_winbar', mode = { 'n', 'v', }, },
-  ['<leader>tgs'] = { function() F.toggle_statusline() end, 'toggle_statusline', mode = { 'n', 'v', }, },
+  ['<localleader>t'] = { name = 'toggle', },
+  ['<localleader>td'] = { function() F.toggle_local 'diff' end, 'toggle_diff', mode = { 'n', 'v', }, },
+  ['<localleader>tw'] = { function() F.toggle_global 'wrap' end, 'toggle_wrap', mode = { 'n', 'v', }, },
+  ['<localleader>tb'] = { function() F.toggle_winbar() end, 'toggle_winbar', mode = { 'n', 'v', }, },
+  ['<localleader>ts'] = { function() F.toggle_statusline() end, 'toggle_statusline', mode = { 'n', 'v', }, },
 }
