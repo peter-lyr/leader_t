@@ -1,7 +1,9 @@
 local F = require 'f'
 
 local function test()
-  F.notify(vim.inspect(vim.bo[vim.fn.bufnr()].expandtab))
+  F.open_term_sel()
+  -- F.notify(vim.inspect(vim.bo[vim.fn.bufnr()].expandtab))
+
   -- F.notify(F.get_opened_projs_files())
   -- F.opened_proj_sel()
 
@@ -20,7 +22,7 @@ local function test()
   --   'python', F.join_path(Org, 'data', 'p', '002-python', '017-在一个仓库内从叶子模块到根部依次更新.py')
   -- })
 
-  -- F.source_cur()
+  -- F.source()
 
   -- F.run_outside { 'pip', 'install', 'bitstring', '-i', 'https://pypi.tuna.tsinghua.edu.cn/simple', '--trusted-host', 'mirrors.aliyun.com', }
 
@@ -68,7 +70,7 @@ require 'which-key'.register {
   ['<leader>tbm'] = { function() F.message_buffer() end, 'message_buffer', mode = { 'n', 'v', }, },
 
   ['<leader>tt'] = { function() test() end, 'test', mode = { 'n', 'v', }, },
-  ['<leader>ts'] = { function() F.source_cur() end, 'source_cur', mode = { 'n', 'v', }, },
+  ['<leader>ts'] = { function() F.source() end, 'source_cur', mode = { 'n', 'v', }, },
   ['<leader>t<c-l>'] = { function() vim.cmd 'mes clear' end, 'mes clear', mode = { 'n', 'v', }, },
   ['<leader>t<c-i>'] = { function() F.list_buf_info() end, 'list_buf_info', mode = { 'n', 'v', }, },
 
