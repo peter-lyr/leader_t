@@ -74,6 +74,8 @@ require 'which-key'.register {
   ['<leader>t<c-l>'] = { function() vim.cmd 'mes clear' end, 'mes clear', mode = { 'n', 'v', }, },
   ['<leader>t<c-i>'] = { function() F.list_buf_info() end, 'list_buf_info', mode = { 'n', 'v', }, },
 
+  ['<leader>te'] = { function() F.open_term_sel() end, 'open_term_sel', mode = { 'n', 'v', }, },
+
   ['<localleader>t'] = { name = 'toggle', },
   ['<localleader>td'] = { function() F.toggle_local 'diff' end, 'toggle_diff', mode = { 'n', 'v', }, },
   ['<localleader>tw'] = { function() F.toggle_global 'wrap' end, 'toggle_wrap', mode = { 'n', 'v', }, },
