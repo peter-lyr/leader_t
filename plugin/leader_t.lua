@@ -92,6 +92,50 @@ require 'which-key'.register {
   ['<localleader>tb'] = { function() F.toggle_winbar() end, 'toggle_winbar', mode = { 'n', 'v', }, },
 }
 
+require '_todo'
+
+require 'which-key'.register {
+  [']t'] = { function() require 'todo-comments'.jump_next() end, 'Next todo comment', mode = { 'n', 'v', }, silent = true, },
+  ['[t'] = { function() require 'todo-comments'.jump_prev() end, 'Prev todo comment', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>t'] = { name = 'todo', },
+  ['<localleader><leader>tt'] = { name = 'todo.telescope', },
+  ['<localleader><leader>tta'] = { function() F.todo_telescope() end, 'TodoTelescope ALL', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>ttf'] = { function() F.todo_telescope 'FIX' end, 'TodoTelescope  FIX', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>ttd'] = { function() F.todo_telescope 'TODO' end, 'TodoTelescope TODO', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tth'] = { function() F.todo_telescope 'HACK' end, 'TodoTelescope HACK', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>ttw'] = { function() F.todo_telescope 'WARN' end, 'TodoTelescope WARN', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>ttp'] = { function() F.todo_telescope 'PERF' end, 'TodoTelescope PERF', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>ttn'] = { function() F.todo_telescope 'NOTE' end, 'TodoTelescope NOTE', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>ttt'] = { function() F.todo_telescope 'TEST' end, 'TodoTelescope TEST', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tt<leader>'] = { name = 'todo.telescope.done', },
+  ['<localleader><leader>tt<leader>a'] = { function() F.todo_telescope() end, 'TodoTelescope  ALLDONE', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tt<leader>f'] = { function() F.todo_telescope 'FIXDONE' end, 'TodoTelescope  FIXDONE', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tt<leader>d'] = { function() F.todo_telescope 'TODODONE' end, 'TodoTelescope TODODONE', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tt<leader>h'] = { function() F.todo_telescope 'HACKDONE' end, 'TodoTelescope HACKDONE', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tt<leader>w'] = { function() F.todo_telescope 'WARNDONE' end, 'TodoTelescope WARNDONE', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tt<leader>p'] = { function() F.todo_telescope 'PERFDONE' end, 'TodoTelescope PERFDONE', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tt<leader>n'] = { function() F.todo_telescope 'NOTEDONE' end, 'TodoTelescope NOTEDONE', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tt<leader>t'] = { function() F.todo_telescope 'TESTDONE' end, 'TodoTelescope TESTDONE', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tq'] = { name = 'todo.quickfix', },
+  ['<localleader><leader>tqa'] = { function() F.todo_quickfix() end, 'TodoQuickFix  All', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tqf'] = { function() F.todo_quickfix 'FIX' end, 'TodoQuickFix  FIX', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tqd'] = { function() F.todo_quickfix 'TODO' end, 'TodoQuickFix TODO', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tqh'] = { function() F.todo_quickfix 'HACK' end, 'TodoQuickFix HACK', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tqw'] = { function() F.todo_quickfix 'WARN' end, 'TodoQuickFix WARN', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tqp'] = { function() F.todo_quickfix 'PERF' end, 'TodoQuickFix PERF', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tqn'] = { function() F.todo_quickfix 'NOTE' end, 'TodoQuickFix NOTE', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tqt'] = { function() F.todo_quickfix 'TEST' end, 'TodoQuickFix TEST', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tq<leader>'] = { name = 'todo.quickfix.done', },
+  ['<localleader><leader>tq<leader>a'] = { function() F.todo_quickfix() end, 'TodoQuickfix  AllDONE', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tq<leader>f'] = { function() F.todo_quickfix 'FIXDONE' end, 'TodoQuickfix  FIXDONE', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tq<leader>d'] = { function() F.todo_quickfix 'TODODONE' end, 'TodoQuickfix TODODONE', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tq<leader>h'] = { function() F.todo_quickfix 'HACKDONE' end, 'TodoQuickfix HACKDONE', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tq<leader>w'] = { function() F.todo_quickfix 'WARNDONE' end, 'TodoQuickfix WARNDONE', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tq<leader>p'] = { function() F.todo_quickfix 'PERFDONE' end, 'TodoQuickfix PERFDONE', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tq<leader>n'] = { function() F.todo_quickfix 'NOTEDONE' end, 'TodoQuickfix NOTEDONE', mode = { 'n', 'v', }, silent = true, },
+  ['<localleader><leader>tq<leader>t'] = { function() F.todo_quickfix 'TESTDONE' end, 'TodoQuickfix TESTDONE', mode = { 'n', 'v', }, silent = true, },
+}
+
 require 'which-key'.register {
   -- ['<localleader>ts'] = { function() F.toggle_statusline() end, 'toggle_statusline', mode = { 'n', 'v', }, },
 }
