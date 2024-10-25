@@ -92,7 +92,7 @@ require 'which-key'.register {
   ['<localleader>tb'] = { function() F.toggle_winbar() end, 'toggle_winbar', mode = { 'n', 'v', }, },
 }
 
-require '_todo'
+F.lazy_load 'todo_dial'
 
 require 'which-key'.register {
   [']t'] = { function() require 'todo-comments'.jump_next() end, 'Next todo comment', mode = { 'n', 'v', }, silent = true, },
