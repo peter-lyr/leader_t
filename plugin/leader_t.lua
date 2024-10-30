@@ -86,6 +86,9 @@ require 'which-key'.register {
 
   ['<leader>te'] = { function() F.open_term_sel() end, 'open_term_sel', mode = { 'n', 'v', }, },
 
+  ['<leader>ta'] = { name = 'add', },
+  ['<leader>tai'] = { function() F.title_cur_line() end, 'title_cur_line', mode = { 'n', 'v', }, },
+
   ['<localleader>t'] = { name = 'toggle', },
   ['<localleader>td'] = { function() F.toggle_local 'diff' end, 'toggle_diff', mode = { 'n', 'v', }, },
   ['<localleader>tw'] = { function() F.toggle_local 'wrap' end, 'toggle_wrap', mode = { 'n', 'v', }, },
