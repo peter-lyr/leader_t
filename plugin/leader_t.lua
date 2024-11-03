@@ -9,7 +9,10 @@ F.aucmd('BufEnter', 'enter term', {
 })
 
 local function test()
-  F.open_term_sel()
+  -- print('---------', string.match('bytes: 1, cols: 16', '^bytes: (%d+),'))
+  -- print('---------', string.match('bytes: 1, cols: 16', ', cols: (%d+)$'))
+
+  -- F.open_term_sel()
   -- F.notify(vim.inspect(vim.bo[vim.fn.bufnr()].expandtab))
 
   -- F.notify(F.get_opened_projs_files())
