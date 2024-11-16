@@ -52,6 +52,9 @@ require 'which-key'.register {
   ['<leader>t'] = { name = 'test', },
   ['<leader>t<leader>'] = { name = 'test.more', },
 
+  ['<leader>t<leader>w'] = { name = 'test.work', },
+  ['<leader>t<leader>ws'] = { function() F.save_sessions_at_cwd() end, 'save_sessions_at_cwd', mode = { 'n', 'v', }, },
+
   ['<leader>tS'] = { function() vim.cmd 'StartupTime' end, 'StartupTime', mode = { 'n', 'v', }, },
 
   ['<leader>tc'] = { function() F.nvimtree_cd(F.get_cur_file()) end, 'nvimtree_cd %:h', mode = { 'n', 'v', }, },
