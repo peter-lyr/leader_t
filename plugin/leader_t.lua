@@ -54,6 +54,7 @@ require 'which-key'.register {
 
   ['<leader>t<leader>w'] = { name = 'test.work', },
   ['<leader>t<leader>ws'] = { function() F.save_sessions_at_cwd() end, 'save_sessions_at_cwd', mode = { 'n', 'v', }, },
+  ['<leader>t<leader>wl'] = { function() F.load_sessions_sel() end, 'load_sessions_sel', mode = { 'n', 'v', }, },
 
   ['<leader>tS'] = { function() vim.cmd 'StartupTime' end, 'StartupTime', mode = { 'n', 'v', }, },
 
