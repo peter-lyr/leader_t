@@ -74,7 +74,9 @@ require 'which-key'.register {
 
   ['<leader>tn'] = { name = 'nvim-qt start', },
   ['<leader>tnc'] = { function() F.start_nvim_qt(F.get_cur_file()) end, 'start_nvim_qt cur', mode = { 'n', 'v', }, },
+  ['<leader>tn<leader>c'] = { function() F.start_nvim_qt(F.get_cur_file()) end, 'start_nvim_qt cur', mode = { 'n', 'v', }, },
   ['<leader>tnn'] = { function() F.start_nvim_qt() end, 'start_nvim_qt', mode = { 'n', 'v', }, },
+  ['<leader>tn<leader>n'] = { function() F.start_nvim_qt() end, 'start_nvim_qt', mode = { 'n', 'v', }, },
   ['<leader>tns'] = { function() F.start_nvim_qt 'session' end, 'start_nvim_qt session', mode = { 'n', 'v', }, },
   ['<leader>tn<leader>s'] = { function() F.start_nvim_qt 'session!' end, 'start_nvim_qt session!', mode = { 'n', 'v', }, },
   ['<leader>tnq'] = { function() vim.cmd 'qa!' end, 'qa!', mode = { 'n', 'v', }, },
