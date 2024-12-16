@@ -57,6 +57,7 @@ require 'which-key'.register {
   ['<leader>t<leader>wl'] = { function() F.load_sessions_sel() end, 'load_sessions_sel', mode = { 'n', 'v', }, },
   ['<leader>t<leader>wm'] = { function() F.work_summary_day 'morning' end, 'work_summary_day morning', mode = { 'n', 'v', }, },
   ['<leader>t<leader>we'] = { function() F.work_summary_day 'evening' end, 'work_summary_day evening', mode = { 'n', 'v', }, },
+  ['<leader>t<leader>wa'] = { function() F.work_day_append() end, 'work_day_append', mode = { 'n', 'v', }, },
 
   ['<leader>t<leader>b'] = { name = 'test.curbuf', },
   ['<leader>t<leader>bc'] = { function() F.copy_to_desktop { F.get_cur_file(), } end, 'curfile copy_to_desktop', mode = { 'n', 'v', }, },
