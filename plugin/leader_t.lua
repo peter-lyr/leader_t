@@ -91,9 +91,12 @@ require 'which-key'.register {
   ['<leader>tr<leader>s'] = { function() F.restart_nvim_qt 'session!' end, 'restart_nvim_qt session!', mode = { 'n', 'v', }, },
   ['<leader>trq'] = { function() vim.cmd 'qa!' end, 'qa!', mode = { 'n', 'v', }, },
 
-  ['<leader>tb'] = { name = 'output buffer', },
+  ['<leader>tb'] = { name = 'buffer/file', },
   ['<leader>tbn'] = { function() F.notifications_buffer() end, 'notifications_buffer', mode = { 'n', 'v', }, },
   ['<leader>tbm'] = { function() F.message_buffer() end, 'message_buffer', mode = { 'n', 'v', }, },
+  ['<leader>tba'] = { function() F.bcomp_a() end, 'bcomp_a', mode = { 'n', 'v', }, },
+  ['<leader>tbb'] = { function() F.bcomp_b() end, 'bcomp_b', mode = { 'n', 'v', }, },
+  ['<leader>tbl'] = { function() F.bcomp_l() end, 'bcomp_l', mode = { 'n', 'v', }, },
 
   ['<leader>tt'] = { function() test() end, 'test', mode = { 'n', 'v', }, },
   ['<leader>ts'] = { function() F.source() end, 'source_cur', mode = { 'n', 'v', }, },
