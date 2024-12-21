@@ -93,6 +93,7 @@ require 'which-key'.register {
   ['<leader>trs'] = { function() F.restart_nvim_qt 'session' end, 'restart_nvim_qt session', mode = { 'n', 'v', }, },
   ['<leader>tr<leader>s'] = { function() F.restart_nvim_qt 'session!' end, 'restart_nvim_qt session!', mode = { 'n', 'v', }, },
   ['<leader>trq'] = { function() vim.cmd 'qa!' end, 'qa!', mode = { 'n', 'v', }, },
+  ['<leader>tr<leader>q'] = { function() vim.cmd 'qa!' end, 'qa!', mode = { 'n', 'v', }, },
 
   ['<leader>tb'] = { name = 'buffer/file', },
   ['<leader>tbn'] = { function() F.notifications_buffer() end, 'notifications_buffer', mode = { 'n', 'v', }, },
