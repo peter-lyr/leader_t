@@ -87,7 +87,9 @@ require 'which-key'.register {
 
   ['<leader>tr'] = { name = 'nvim-qt restart', },
   ['<leader>trc'] = { function() F.restart_nvim_qt(F.get_cur_file()) end, 'restart_nvim_qt cur', mode = { 'n', 'v', }, },
+  ['<leader>tr<leaderr>c'] = { function() F.restart_nvim_qt(F.get_cur_file()) end, 'restart_nvim_qt cur', mode = { 'n', 'v', }, },
   ['<leader>trn'] = { function() F.restart_nvim_qt() end, 'restart_nvim_qt', mode = { 'n', 'v', }, },
+  ['<leader>tr<leaderr>n'] = { function() F.restart_nvim_qt() end, 'restart_nvim_qt', mode = { 'n', 'v', }, },
   ['<leader>trs'] = { function() F.restart_nvim_qt 'session' end, 'restart_nvim_qt session', mode = { 'n', 'v', }, },
   ['<leader>tr<leader>s'] = { function() F.restart_nvim_qt 'session!' end, 'restart_nvim_qt session!', mode = { 'n', 'v', }, },
   ['<leader>trq'] = { function() vim.cmd 'qa!' end, 'qa!', mode = { 'n', 'v', }, },
