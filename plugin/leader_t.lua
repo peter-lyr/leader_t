@@ -98,6 +98,7 @@ require 'which-key'.register {
   ['<leader>tb'] = { name = 'buffer/file', },
   ['<leader>tbn'] = { function() F.notifications_buffer() end, 'notifications_buffer', mode = { 'n', 'v', }, },
   ['<leader>tbm'] = { function() F.message_buffer() end, 'message_buffer', mode = { 'n', 'v', }, },
+  ['<leader>tbe'] = { function() F.execute_output() end, 'execute_output', mode = { 'n', 'v', }, },
   ['<leader>tba'] = { function() F.bcomp_a() end, 'bcomp_a', mode = { 'n', 'v', }, },
   ['<leader>tbb'] = { function() F.bcomp_b() end, 'bcomp_b', mode = { 'n', 'v', }, },
   ['<leader>tbl'] = { function() F.bcomp_l() end, 'bcomp_l', mode = { 'n', 'v', }, },
