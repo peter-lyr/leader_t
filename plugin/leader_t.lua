@@ -9,6 +9,15 @@ F.aucmd('BufEnter', 'enter term', {
 })
 
 local function test()
+  -- vim.cmd [[
+  --   let buflist = []
+  --   for i in range(tabpagenr('$'))
+  --      " call extend(buflist, [0])
+  --      call extend(buflist, tabpagebuflist(i + 1))
+  --   endfor
+  --   echomsg buflist
+  -- ]]
+
   -- print('---------', string.match('bytes: 1, cols: 16', '^bytes: (%d+),'))
   -- print('---------', string.match('bytes: 1, cols: 16', ', cols: (%d+)$'))
 
