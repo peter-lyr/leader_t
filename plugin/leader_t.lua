@@ -55,6 +55,7 @@ require 'which-key'.register {
   ['<leader>t<leader>w'] = { name = 'test.work', },
   ['<leader>t<leader>ws'] = { function() F.save_sessions_at_cwd() end, 'save_sessions_at_cwd', mode = { 'n', 'v', }, },
   ['<leader>t<leader>wl'] = { function() F.load_sessions_sel() end, 'load_sessions_sel', mode = { 'n', 'v', }, },
+  ['<leader>t<leader>w<leader>l'] = { function() F.reload_sessions_sel() end, 'reload_sessions_sel', mode = { 'n', 'v', }, },
   ['<leader>t<leader>wm'] = { function() F.work_summary_day 'morning' end, 'work_summary_day morning', mode = { 'n', 'v', }, },
   ['<leader>t<leader>we'] = { function() F.work_summary_day 'evening' end, 'work_summary_day evening', mode = { 'n', 'v', }, },
   ['<leader>t<leader>wa'] = { function() F.work_day_append() end, 'work_day_append', mode = { 'n', 'v', }, },
