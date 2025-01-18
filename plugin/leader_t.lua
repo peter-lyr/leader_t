@@ -93,6 +93,8 @@ require 'which-key'.register {
   ['<leader>tn<leader>n'] = { function() F.start_nvim_qt() end, 'start_nvim_qt', mode = { 'n', 'v', }, },
   ['<leader>tns'] = { function() F.start_nvim_qt 'session' end, 'start_nvim_qt session', mode = { 'n', 'v', }, },
   ['<leader>tn<leader>s'] = { function() F.start_nvim_qt 'session!' end, 'start_nvim_qt session!', mode = { 'n', 'v', }, },
+  ['<leader>tna'] = { function() F.start_nvim_qt 'session#' end, 'start_nvim_qt session tabpages', mode = { 'n', 'v', }, },
+  ['<leader>tn<leader>a'] = { function() F.start_nvim_qt 'session!#' end, 'start_nvim_qt session! tabpages', mode = { 'n', 'v', }, },
   ['<leader>tnq'] = { function() vim.cmd 'qa!' end, 'qa!', mode = { 'n', 'v', }, },
 
   ['<leader>tr'] = { name = 'nvim-qt restart', },
@@ -102,6 +104,8 @@ require 'which-key'.register {
   ['<leader>tr<leader>n'] = { function() F.restart_nvim_qt() end, 'restart_nvim_qt', mode = { 'n', 'v', }, },
   ['<leader>trs'] = { function() F.restart_nvim_qt 'session' end, 'restart_nvim_qt session', mode = { 'n', 'v', }, },
   ['<leader>tr<leader>s'] = { function() F.restart_nvim_qt 'session!' end, 'restart_nvim_qt session!', mode = { 'n', 'v', }, },
+  ['<leader>tra'] = { function() F.restart_nvim_qt 'session#' end, 'restart_nvim_qt session tabpages', mode = { 'n', 'v', }, },
+  ['<leader>tr<leader>a'] = { function() F.restart_nvim_qt 'session!#' end, 'restart_nvim_qt session! tabpages', mode = { 'n', 'v', }, },
   ['<leader>trq'] = { function() vim.cmd 'qa!' end, 'qa!', mode = { 'n', 'v', }, },
   ['<leader>tr<leader>q'] = { function() vim.cmd 'qa!' end, 'qa!', mode = { 'n', 'v', }, },
 
