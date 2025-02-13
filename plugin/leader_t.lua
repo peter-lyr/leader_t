@@ -9,6 +9,14 @@ F.aucmd('BufEnter', 'enter term', {
 })
 
 local function test()
+  local ll = vim.fn.getpos '.'
+  local line = vim.fn.getline '.'
+  -- print('ll[1]:', 'll[1]:')
+  -- print('ll[2]:', ll[2])
+  -- print('ll[3]:', ll[3])
+  -- print('ll[4]:', ll[4])
+  print('string.sub(line, 1, ll[3]):', string.sub(line, 1, ll[3] - 1) .. '<!--www-->' .. string.sub(line, ll[3], #line))
+
   -- vim.cmd [[
   --   let buflist = []
   --   for i in range(tabpagenr('$'))
