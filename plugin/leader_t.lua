@@ -80,6 +80,7 @@ require 'which-key'.register {
 
   ['<leader>t<leader>a'] = { name = 'add', },
   ['<leader>t<leader>a<leader>'] = { function() F.create_index_file() end, 'create_index_file', mode = { 'n', 'v', }, },
+  ['<leader>t<leader>ao'] = { function() F.sel_open_same_index_file() end, 'sel_open_same_index_file', mode = { 'n', 'v', }, },
 
   ['<leader>t<leader>b'] = { name = 'test.curbuf', },
   ['<leader>t<leader>bc'] = { function() F.copy_to_desktop { F.get_cur_file(), } end, 'curfile copy_to_desktop', mode = { 'n', 'v', }, },
