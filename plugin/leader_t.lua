@@ -79,7 +79,7 @@ require 'which-key'.register {
   ['<leader>t<leader>wk'] = { function() F.work_summary_week() end, 'work_summary_week', mode = { 'n', 'v', }, },
 
   ['<leader>t<leader>a'] = { name = 'add', },
-  ['<leader>t<leader>a<leader>'] = { function() F.create_index_file() end, 'create_index_file', mode = { 'n', 'v', }, },
+  ['<leader>t<leader>ac'] = { function() F.create_index_file() end, 'create_index_file', mode = { 'n', 'v', }, },
   ['<leader>t<leader>ao'] = { function() F.sel_open_same_index_file() end, 'sel_open_same_index_file', mode = { 'n', 'v', }, },
 
   ['<leader>t<leader>b'] = { name = 'test.curbuf', },
