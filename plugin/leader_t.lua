@@ -78,6 +78,9 @@ require 'which-key'.register {
   ['<leader>t<leader>wa'] = { function() F.work_day_append() end, 'work_day_append', mode = { 'n', 'v', }, },
   ['<leader>t<leader>wk'] = { function() F.work_summary_week() end, 'work_summary_week', mode = { 'n', 'v', }, },
 
+  ['<leader>t<leader>a'] = { name = 'add', },
+  ['<leader>t<leader>a<leader>'] = { function() F.create_index_file() end, 'create_index_file', mode = { 'n', 'v', }, },
+
   ['<leader>t<leader>b'] = { name = 'test.curbuf', },
   ['<leader>t<leader>bc'] = { function() F.copy_to_desktop { F.get_cur_file(), } end, 'curfile copy_to_desktop', mode = { 'n', 'v', }, },
   ['<leader>t<leader>bd'] = { function() F.delete_from_desktop { F.get_cur_file(), } end, 'curfile delete_from_desktop', mode = { 'n', 'v', }, },
