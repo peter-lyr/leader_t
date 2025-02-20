@@ -85,6 +85,7 @@ require 'which-key'.register {
   ['<leader>t<leader>b'] = { name = 'test.curbuf', },
   ['<leader>t<leader>bc'] = { function() F.copy_to_desktop { F.get_cur_file(), } end, 'curfile copy_to_desktop', mode = { 'n', 'v', }, },
   ['<leader>t<leader>bd'] = { function() F.delete_from_desktop { F.get_cur_file(), } end, 'curfile delete_from_desktop', mode = { 'n', 'v', }, },
+  ['<leader>t<leader>br'] = { function() F.run_under_desktop { F.get_cur_file(), } end, 'curfile run_under_desktop', mode = { 'n', 'v', }, },
 
   ['<leader>tS'] = { function() vim.cmd 'StartupTime' end, 'StartupTime', mode = { 'n', 'v', }, },
 
