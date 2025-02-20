@@ -82,11 +82,6 @@ require 'which-key'.register {
   ['<leader>t<leader>ac'] = { function() F.create_index_file() end, 'create_index_file', mode = { 'n', 'v', }, },
   ['<leader>t<leader>ao'] = { function() F.sel_open_same_index_file() end, 'sel_open_same_index_file', mode = { 'n', 'v', }, },
 
-  ['<leader>t<leader>b'] = { name = 'test.curbuf', },
-  ['<leader>t<leader>bc'] = { function() F.copy_to_desktop { F.get_cur_file(), } end, 'curfile copy_to_desktop', mode = { 'n', 'v', }, },
-  ['<leader>t<leader>bd'] = { function() F.delete_from_desktop { F.get_cur_file(), } end, 'curfile delete_from_desktop', mode = { 'n', 'v', }, },
-  ['<leader>t<leader>br'] = { function() F.run_under_desktop { F.get_cur_file(), } end, 'curfile run_under_desktop', mode = { 'n', 'v', }, },
-
   ['<leader>tS'] = { function() vim.cmd 'StartupTime' end, 'StartupTime', mode = { 'n', 'v', }, },
 
   ['<leader>tc'] = { function() F.nvimtree_cd(F.get_cur_file()) end, 'nvimtree_cd %:h', mode = { 'n', 'v', }, },
@@ -129,6 +124,11 @@ require 'which-key'.register {
   ['<leader>tba'] = { function() F.bcomp_a() end, 'bcomp_a', mode = { 'n', 'v', }, },
   ['<leader>tbb'] = { function() F.bcomp_b() end, 'bcomp_b', mode = { 'n', 'v', }, },
   ['<leader>tbl'] = { function() F.bcomp_l() end, 'bcomp_l', mode = { 'n', 'v', }, },
+
+  ['<leader>t<leader>b'] = { name = 'test.curbuf', },
+  ['<leader>t<leader>bc'] = { function() F.copy_to_desktop { F.get_cur_file(), } end, 'curfile copy_to_desktop', mode = { 'n', 'v', }, },
+  ['<leader>t<leader>bd'] = { function() F.delete_from_desktop { F.get_cur_file(), } end, 'curfile delete_from_desktop', mode = { 'n', 'v', }, },
+  ['<leader>t<leader>br'] = { function() F.run_under_desktop { F.get_cur_file(), } end, 'curfile run_under_desktop', mode = { 'n', 'v', }, },
 
   ['<leader>tt'] = { function() test() end, 'test', mode = { 'n', 'v', }, },
   ['<leader>ts'] = { function() F.source() end, 'source_cur', mode = { 'n', 'v', }, },
