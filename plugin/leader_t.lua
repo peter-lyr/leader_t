@@ -69,6 +69,8 @@ require 'which-key'.register {
   ['<leader>t'] = { name = 'test', },
   ['<leader>t<leader>'] = { name = 'test.more', },
 
+  ['<leader>tz'] = { function() F.toggle_sides() end, 'toggle_sides', mode = { 'n', 'v', }, },
+
   ['<leader>t<leader>w'] = { name = 'test.work', },
   ['<leader>t<leader>ws'] = { function() F.save_sessions_at_cwd() end, 'save_sessions_at_cwd', mode = { 'n', 'v', }, },
   ['<leader>t<leader>wl'] = { function() F.load_sessions_sel() end, 'load_sessions_sel', mode = { 'n', 'v', }, },
