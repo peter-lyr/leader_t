@@ -79,6 +79,7 @@ require 'which-key'.register {
   ['<leader>t<leader>we'] = { function() F.work_summary_day 'evening' end, 'work_summary_day evening', mode = { 'n', 'v', }, },
   ['<leader>t<leader>wa'] = { function() F.work_day_append() end, 'work_day_append', mode = { 'n', 'v', }, },
   ['<leader>t<leader>wk'] = { function() F.work_summary_week() end, 'work_summary_week', mode = { 'n', 'v', }, },
+  ['<leader>t<leader>wg'] = { function() F.work_summary_week_all() end, 'work_summary_week_all', mode = { 'n', 'v', }, },
 
   ['<leader>t<leader>a'] = { name = 'add', },
   ['<leader>t<leader>ac'] = { function() F.create_index_file() end, 'create_index_file', mode = { 'n', 'v', }, },
