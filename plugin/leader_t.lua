@@ -78,7 +78,6 @@ require 'which-key'.register {
   ['<leader>tS'] = { function() vim.cmd 'StartupTime' end, 'StartupTime', mode = { 'n', 'v', }, },
 
   ['<leader>tt'] = { function() test() end, 'test', mode = { 'n', 'v', }, },
-  ['<leader>ts'] = { function() F.source() end, 'source_cur', mode = { 'n', 'v', }, },
   ['<leader>t<c-l>'] = { function() vim.cmd 'mes clear' end, 'mes clear', mode = { 'n', 'v', }, },
   ['<leader>t<c-i>'] = { function() F.list_buf_info() end, 'list_buf_info', mode = { 'n', 'v', }, },
 
