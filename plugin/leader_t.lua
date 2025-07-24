@@ -119,11 +119,6 @@ require 'which-key'.register {
   ['<leader>tbb'] = { function() F.bcomp_b() end, 'bcomp_b', mode = { 'n', 'v', }, },
   ['<leader>tbl'] = { function() F.bcomp_l() end, 'bcomp_l', mode = { 'n', 'v', }, },
 
-  ['<leader>t<leader>b'] = { name = 'test.curbuf', },
-  ['<leader>t<leader>bc'] = { function() F.copy_to_desktop { F.get_cur_file(), } end, 'curfile copy_to_desktop', mode = { 'n', 'v', }, },
-  ['<leader>t<leader>bd'] = { function() F.delete_from_desktop { F.get_cur_file(), } end, 'curfile delete_from_desktop', mode = { 'n', 'v', }, },
-  ['<leader>t<leader>br'] = { function() F.run_under_desktop { F.get_cur_file(), } end, 'curfile run_under_desktop', mode = { 'n', 'v', }, },
-
   ['<leader>tt'] = { function() test() end, 'test', mode = { 'n', 'v', }, },
   ['<leader>ts'] = { function() F.source() end, 'source_cur', mode = { 'n', 'v', }, },
   ['<leader>t<c-l>'] = { function() vim.cmd 'mes clear' end, 'mes clear', mode = { 'n', 'v', }, },
