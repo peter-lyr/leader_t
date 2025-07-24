@@ -88,14 +88,6 @@ require 'which-key'.register {
 
   ['<leader>tS'] = { function() vim.cmd 'StartupTime' end, 'StartupTime', mode = { 'n', 'v', }, },
 
-  ['<leader>tb'] = { name = 'buffer/file', },
-  ['<leader>tbn'] = { function() F.notifications_buffer() end, 'notifications_buffer', mode = { 'n', 'v', }, },
-  ['<leader>tbm'] = { function() F.message_buffer() end, 'message_buffer', mode = { 'n', 'v', }, },
-  ['<leader>tbe'] = { function() F.execute_output() end, 'execute_output', mode = { 'n', 'v', }, },
-  ['<leader>tba'] = { function() F.bcomp_a() end, 'bcomp_a', mode = { 'n', 'v', }, },
-  ['<leader>tbb'] = { function() F.bcomp_b() end, 'bcomp_b', mode = { 'n', 'v', }, },
-  ['<leader>tbl'] = { function() F.bcomp_l() end, 'bcomp_l', mode = { 'n', 'v', }, },
-
   ['<leader>tt'] = { function() test() end, 'test', mode = { 'n', 'v', }, },
   ['<leader>ts'] = { function() F.source() end, 'source_cur', mode = { 'n', 'v', }, },
   ['<leader>t<c-l>'] = { function() vim.cmd 'mes clear' end, 'mes clear', mode = { 'n', 'v', }, },
