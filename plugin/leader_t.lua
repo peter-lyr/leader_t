@@ -71,10 +71,6 @@ require 'which-key'.register {
 
   ['<leader>tz'] = { function() F.toggle_sides() end, 'toggle_sides', mode = { 'n', 'v', }, },
 
-  ['<leader>t<leader>a'] = { name = 'add', },
-  ['<leader>t<leader>ac'] = { function() F.create_index_file() end, 'create_index_file', mode = { 'n', 'v', }, },
-  ['<leader>t<leader>ao'] = { function() F.sel_open_same_index_file() end, 'sel_open_same_index_file', mode = { 'n', 'v', }, },
-
   ['<leader>tS'] = { function() vim.cmd 'StartupTime' end, 'StartupTime', mode = { 'n', 'v', }, },
 
   ['<leader>tt'] = { function() test() end, 'test', mode = { 'n', 'v', }, },
@@ -82,10 +78,6 @@ require 'which-key'.register {
   ['<leader>t<c-i>'] = { function() F.list_buf_info() end, 'list_buf_info', mode = { 'n', 'v', }, },
 
   ['<leader>te'] = { function() F.open_term_sel() end, 'open_term_sel', mode = { 'n', 'v', }, },
-
-  ['<leader>ta'] = { name = 'add', },
-  ['<leader>tai'] = { function() F.title_cur_line() end, 'title_cur_line', mode = { 'n', 'v', }, },
-  ['<leader>tad'] = { function() F.mkdir_cur_tail() end, 'mkdir_cur_tail', mode = { 'n', 'v', }, },
 
   ['<localleader>t'] = { name = 'toggle', },
   ['<localleader>td'] = { function() F.toggle_local 'diff' end, 'toggle_diff', mode = { 'n', 'v', }, },
