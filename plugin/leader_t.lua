@@ -177,5 +177,6 @@ require 'which-key'.register {
   ['<leader>t<leader>m'] = { function() F.count_down_minutes 'save_wechat' end, 'count_down_minutes save_wechat', mode = { 'n', 'v', }, },
   ['<leader>t<leader>s'] = { function() F.count_down_seconds 'save_wechat' end, 'count_down_seconds save_wechat', mode = { 'n', 'v', }, },
   ['<leader>t-'] = { function() F.count_down_step_forward() end, 'count_down_step_forward', mode = { 'n', 'v', }, },
+  ['<leader>t='] = { function() F.count_down_for_timer() end, 'count_down_for_timer', mode = { 'n', 'v', }, },
   -- ['<localleader>ts'] = { function() F.toggle_statusline() end, 'toggle_statusline', mode = { 'n', 'v', }, },
 }
