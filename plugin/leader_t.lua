@@ -172,10 +172,10 @@ require 'which-key'.register {
 }
 
 require 'which-key'.register {
-  ['<leader>tm'] = { function() F.count_down_minutes 'save_wechat' end, 'count_down_minutes save_wechat', mode = { 'n', 'v', }, },
-  ['<leader>ts'] = { function() F.count_down_seconds 'save_wechat' end, 'count_down_seconds save_wechat', mode = { 'n', 'v', }, },
-  ['<leader>t<leader>m'] = { function() F.count_down_minutes() end, 'count_down_minutes', mode = { 'n', 'v', }, },
-  ['<leader>t<leader>s'] = { function() F.count_down_seconds() end, 'count_down_seconds', mode = { 'n', 'v', }, },
+  ['<leader>tm'] = { function() F.count_down_minutes() end, 'count_down_minutes', mode = { 'n', 'v', }, },
+  ['<leader>ts'] = { function() F.count_down_seconds() end, 'count_down_seconds', mode = { 'n', 'v', }, },
+  ['<leader>t<leader>m'] = { function() F.count_down_minutes 'save_wechat' end, 'count_down_minutes save_wechat', mode = { 'n', 'v', }, },
+  ['<leader>t<leader>s'] = { function() F.count_down_seconds 'save_wechat' end, 'count_down_seconds save_wechat', mode = { 'n', 'v', }, },
   ['<leader>t_'] = { function() F.count_down_manual_end() end, 'count_down_manual_end', mode = { 'n', 'v', }, },
   -- ['<localleader>ts'] = { function() F.toggle_statusline() end, 'toggle_statusline', mode = { 'n', 'v', }, },
 }
