@@ -173,7 +173,8 @@ require 'which-key'.register {
 }
 
 require 'which-key'.register {
-  ['<leader>t<tab>'] = { function() F.count_down_minutes() end, 'count_down', mode = { 'n', 'v', }, },
-  ['<leader>t<leader><tab>'] = { function() F.count_down_seconds() end, 'count_down', mode = { 'n', 'v', }, },
+  ['<leader>t<tab>'] = { function() F.count_down_minutes() end, 'count_down_minutes', mode = { 'n', 'v', }, },
+  ['<leader>t<leader><tab>'] = { function() F.count_down_seconds() end, 'count_down_seconds', mode = { 'n', 'v', }, },
+  ['<leader>t<leader><leader><tab>'] = { function() F.count_down_manual_end() end, 'count_down_manual_end', mode = { 'n', 'v', }, },
   -- ['<localleader>ts'] = { function() F.toggle_statusline() end, 'toggle_statusline', mode = { 'n', 'v', }, },
 }
